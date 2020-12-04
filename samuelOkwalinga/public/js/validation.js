@@ -83,7 +83,8 @@ let regFormVal = () => {
         return false;
     }
     else {
-    setTimeout(() => {  successMsg.innerHTML = "Registration was successful!"; }, 8000);
+    successMsg.innerHTML = "Registration was successful!";
+    sleep(5000);
     return true;
 };
 };

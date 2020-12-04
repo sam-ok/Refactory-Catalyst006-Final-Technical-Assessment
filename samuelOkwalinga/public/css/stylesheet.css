@@ -39,15 +39,10 @@ body{
   /* Success Message Box Styling. */
 
   .message{
-    width: 1110px;
+    width: 1500px;
+    margin: 20px 0px 5px 0px;
     padding: 20px 0px 10px 0px;
     font-size: 15px;
     background-color: #4a964c;
     color: #ffffff;
-  }
-
-
-  /* Copyright Info */
-  .bottomText{
-    text-align: "center";
   }

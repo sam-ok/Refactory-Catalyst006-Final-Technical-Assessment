@@ -24,5 +24,22 @@ regRouter.post('/regestrationForm', async (req, res) => {
     }
 });
 
+// Retrieve data from the database. 
+// regRouter.get('/userDashboard', async (req, res) => {
+//     if (req.session.user) {
+//         try {
+//             let patient = await Registration.find();
+//             res.render('userDashboard', { title: 'User Dashboard', users: patient, currentUser: req.session.user })
+//         } catch (err) {
+//             res.status(400).send("Unable to find user in the database");
+//         }
+//     } else {
+//         console.log("Can't find session")
+//         res.redirect('/')
+//     }
+// })
+
+
+
 //Exporting this regRouter module.
 module.exports = regRouter;

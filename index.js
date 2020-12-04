@@ -5,12 +5,12 @@ const path = require('path');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const port = process.env.port || 3300;
-const adminRoutes = require('./routes/adminRoutes');
+const registrationRoutes = require('./samuelOkwalinga/routes/registrationRoutes');
 // Initialising app.
 const app = express();
 
 //DB connection.
-mongoose.connect(process.env.ufarmDB, {
+mongoose.connect(process.env.covidDB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes.
-app.use('/', adminRoutes);
+app.use('/', registrationRoutes);
 
 
 // Handling non-existent routes.

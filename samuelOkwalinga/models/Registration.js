@@ -2,45 +2,22 @@
 const mongoose = require('mongoose');
 // Setting up the registration schema.
 const registrationSchema = new mongoose.Schema({
-    firstName: {
+    surName: {
         type: String
     },
-    lastName: {
+    givenNamee: {
         type: String
     },
-    birthDay: {
+    dob: {
         type: String
     },
-    nin: {
+    residence: {
         type: String
     },
     gender: String,
-    ward: String,
-    email: String,
-    phone: {
-        type: Number
-    },
-    product: [{
-        type: String
-    }],
-    comment: String,
-    payment: [{
-        type: String
-    }],
-    delivery: [{
-        type: String
-    }],
-    regDate: {
-        type: String
-    },
-    image: {
-        type: String
-    },
-    username: {
-        type: String,
-        unique: true
-    },
-    termsConditions: String
+    occupation: String,
+    nationality: String,
+    category: String
 }, { timestamps: true });
 
 // Exporting schema.

@@ -1,0 +1,36 @@
+/* Body styling. */
+
+body{
+    font-family: sans-serif;
+}
+
+/* Header image styling. */
+.headerImage{
+    width: 1500px;
+    margin: 20px 0px 5px 0px;
+}
+
+/* Header text on the form. */
+.headerText{
+    text-align: center;
+    margin: 20px 0px 10px 0px ;
+}
+
+/* Styling for the COVID-19 String. */
+.virus{
+    text-emphasis-style: bold;
+    font-style: bold;
+    size: 20px;
+}
+
+/* Registration button alignment. */
+.btnAlign{
+    margin: 10px 0px 50px 860px;
+}
+
+/* Styling for the error span. */
+.covers{
+    width: 15px;
+    font-size: 15px;
+    color: #ff0000;
+  }

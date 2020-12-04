@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Patient Registration</title>
+</head>
+
+<body>
+    <main>
+        <!-- HEADER IMAGE AND TEXT -->
+        <div class="container">
+            <div class=" row">
+                <img src="../images/form-header-image.png" alt="Image of MOH Logo" class="headerImage">
+            </div>
+            <div>
+                <h4 class="headerText">Ministry of Health</h4>
+                <h1 class="headerText virus">COVID-19 (CORONA VIRUS)</h1>
+                <h4 class="headerText">Virus - Test Registration Form</h4>
+            </div>
+            <div>
+                <span id="successMsg"></span>
+            </div>
+        </div>
+        <section>
+            <!-- REGISTRATION FORM -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 order-md-1">
+                        <form name="regForm" action="./regestrationForm" method="POST" onsubmit="return regFormVal()">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="surName">Surname</label>
+                                    <input type="text" class="form-control" name="surName" placeholder="" value="">
+                                    <span id="surnameErr"  class="covers">
+                                    </span>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="givenName">Given name</label>
+                                    <input type="text" class="form-control" name="givenName" placeholder="" value="">
+                                    <span id="givenNameErr"  class="covers">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" class="form-control" name="dob" placeholder="" value="">
+                                    <span id="dobErr"  class="covers">
+                                    </span>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="residence">Place of residence</label>
+                                    <input type="text" class="form-control" name="residence" placeholder="" value="">
+                                    <span id="residenceErr"  class="covers">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="occupation">Occupation</label>
+                                    <input type="text" class="form-control" name="occupation" placeholder="" value="">
+                                    <span id="occupationErr">
+                                    </span>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="nationality">Nationality</label>
+                                    <input type="text" class="form-control" name="nationality" placeholder="" value="">
+                                    <span id="nationalityErr"  class="covers">
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="mb-3">Gender</h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="custom-control custom-radio">
+                                        <input id="male" name="gender" type="radio" class="custom-control-input" checked
+                                            required>
+                                        <label class="custom-control-label" for="male  ">Male</label>
+                                    </div>
+                                    <div class="custom-control custom-radio col-md-6 mb-3">
+                                        <input id="female" name="gender" type="radio" class="custom-control-input"
+                                            required>
+                                        <label class="custom-control-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="category">Category</label>
+                                    <span id="categoryErr"  class="covers"></span>
+                                    <select class="custom-select d-block w-100" id="category">
+                                        <option value="">--Select Category--</option>
+                                        <option>United States</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 btnAlign">
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+
+</html>

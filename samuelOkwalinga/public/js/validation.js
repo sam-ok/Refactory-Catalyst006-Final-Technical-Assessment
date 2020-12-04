@@ -22,24 +22,25 @@ let regFormVal = () => {
     /*====REGEX EXPRESSION.====*/
     /*Aphabets with spaces allowed in between letters.*/
     // Name validations.
-    let regex = /^(?![\s.]+$)[a-zA-Z\s.]{1,16}$/;
+    let nameregex = /^(?![\s.]+$)[a-zA-Z\s.]{1,16}$/;
     // Place of residence validation
     let placeregex = /^(?![\s.]+$)[a-zA-Z\s.]{1,20}$/;
-    // Occupation
+    // Occupation.
     let occupationregex = /^(?![\s.]+$)[a-zA-Z\s.]{5,50}$/;
+    // Nationality.
+    let nationalityregex = /^(?![\s.]+$)[a-zA-Z\s.]{5,20}$/;
 
     /* ===VALIDATION STATEMENTS=== */
-    if (!surName.value.match(regex)) {
+    if (!surName.value.match(nameregex)) {
         surName.style.border = '1px solid red';
-        surnameErr.innerHTML = "It should be between 1 to 16 alpha-bet characters";
+        surnameErr.innerHTML = "It should be between 1 to 16 alphabet characters";
         surName.focus();
         return false;
     };
 
-
-    if (!givenName.value.match(regex)) {
+    if (!givenName.value.match(nameregex)) {
         givenName.style.border = '1px solid red';
-        givenNameErr.innerHTML = "It should be between 1 to 16 alpha-bet characters.";
+        givenNameErr.innerHTML = "It should be between 1 to 16 alphabet characters.";
         return false;
     };
 
@@ -64,7 +65,7 @@ let regFormVal = () => {
     }
 
     // nationality number validation.
-    if (!nationality.value.match(placeregex)) {
+    if (!nationality.value.match(nationalityregex)) {
         nationality.style.border = '1px solid red';
         nationalityErr.innerHTML = "It should be between 5 to 20 alpha-bet characters.";
         return false;

@@ -7,7 +7,7 @@ const Registration = require('../models/Registration');
 
 /* === ROUTING === */
 //Read operation during registration.
-regRouter.get('/regestrationForm', (req, res) => {
+regRouter.get('/', (req, res) => {
     res.render('index', { title: 'Registration form' })
 });
 
@@ -16,7 +16,7 @@ regRouter.post('/regestrationForm', async (req, res) => {
     try {
         const registration = new Registration(req.body);
         await registration.save(registration);
-        res.redirect('/index');
+        res.redirect('/');
     }
     catch (err) {
         res.status(400).send('Sorry dear! Something seems wrong.')

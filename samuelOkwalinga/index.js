@@ -5,7 +5,7 @@ const path = require('path');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const port = process.env.port || 3300;
-const registrationRoutes = require('./samuelOkwalinga/routes/registrationRoutes');
+const registrationRoutes = require('./routes/registrationRoutes');
 // Initialising app.
 const app = express();
 

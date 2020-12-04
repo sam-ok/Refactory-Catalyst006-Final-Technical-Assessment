@@ -1,16 +1,26 @@
 extends layout
 block content
+  div
+    h4.headerText Ministry of Health
+    h3.headerText.virus COVID-19 (CORONA VIRUS)
+    h4.headerText PATIENT LIST
+
+  //- Navigation bar on the dashboard. 
+  nav.navbar.navbar-expand-md
+    a.navbar-brand(href="/index")
+      button.navbar-toggler(type="submit") Add User
+  //- Dashboard header.
   section#main
     .container
       .row
-        .col-md-10
+        .col-md-12
           .panel-body.form-row
-            h3.tableTitle USER LIST
+            //- Dashboard form.
             form.search(action='/userDashboard' method = "post")
             div(style="overflow-x:auto;")
                     table.table.table-bordered.tall
-                      thread.thread-success
-                        tr.bg-success
+                      thread.thread-primary
+                        tr.bg-primary
                           th Surname
                           th Given Name
                           th Date of Birth
@@ -35,10 +45,10 @@ block content
                             td #{user.category}
                             td
                               a(href='/updateUserInfo/'+user._id)
-                                button.btn.btn-success.btn-block(type="submit") Update
+                                button.btn.btn-primary.btn-block(type="submit") Update
                             td
                               form(method="post" action='/userDashboard')
                                 input(type="hidden", placeholder="", name="id", value=user._id)
-                                button.btn.btn-success.btn-block(type="submit") Delete
+                                button.btn.btn-primary.btn-block(type="submit") Delete
                         else
                           p Add users first. None are here yet!

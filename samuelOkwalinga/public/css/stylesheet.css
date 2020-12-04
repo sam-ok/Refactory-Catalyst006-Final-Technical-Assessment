@@ -37,7 +37,6 @@ body{
 
 
   /* Success Message Box Styling. */
-
   .message{
     width: 1500px;
     margin: 20px 0px 5px 0px;
@@ -45,4 +44,18 @@ body{
     font-size: 15px;
     background-color: #4a964c;
     color: #ffffff;
+  }
+
+
+  /* Text Alignment for the select options */
+  #textAlign{
+      text-align: center;
+  }
+
+  /* Table title on the dashboard. */
+  #tableTitle{
+      text-align: center !important;
+      font-size: 25px;
+      text-emphasis: bold;
+      color: #1e1e88;
   }

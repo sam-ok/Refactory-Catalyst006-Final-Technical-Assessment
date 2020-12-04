@@ -5,7 +5,7 @@ const registrationSchema = new mongoose.Schema({
     surName: {
         type: String
     },
-    givenNamee: {
+    givenName: {
         type: String
     },
     dob: {

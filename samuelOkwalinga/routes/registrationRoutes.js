@@ -25,20 +25,25 @@ regRouter.post('/regestrationForm', async (req, res) => {
 });
 
 // Retrieve data from the database. 
-// regRouter.get('/userDashboard', async (req, res) => {
-//     if (req.session.user) {
-//         try {
-//             let patient = await Registration.find();
-//             res.render('userDashboard', { title: 'User Dashboard', users: patient, currentUser: req.session.user })
-//         } catch (err) {
-//             res.status(400).send("Unable to find user in the database");
-//         }
-//     } else {
-//         console.log("Can't find session")
-//         res.redirect('/')
-//     }
-// })
+regRouter.get('/userDashboard', async (req, res) => {
+        try {
+            let patient = await Registration.find();
+            res.render('usersDashboard', { title: 'User Dashboard', users: patient })
+        } catch (err) {
+            res.status(400).send("Unable to find user in the database");
+        }
+})
 
+
+// Deleting user.
+regRouter.post('/userDashboard', async (req, res) => {
+        try {
+            await Registration.deleteOne({ _id: req.body.id })
+            res.redirect('back')
+        } catch (err) {
+            res.status(400).send("Sorry, unable to delete user in the database");
+        }
+});
 
 
 //Exporting this regRouter module.

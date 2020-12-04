@@ -1,25 +1,17 @@
-meta(charset="UTF-8")
-meta(name="viewport", content="width=device-width,initial-scale=1")
-link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css")
-link(rel="stylesheet", href="../css/stylesheet.css")
-title Patient Registration
-main
-  //  HEADER IMAGE AND TEXT 
-  .container
-    .row
-      img.headerImage(src="../images/form-header-image.png", alt="Image of MOH Logo")
-    div
-      h4.headerText Ministry of Health
-      h1.headerText.virus COVID-19 (CORONA VIRUS)
-      h4.headerText Virus - Test Registration Form
-    div
-      span#successMsg.message
+extends layout
+block content
+  div
+    h4.headerText Ministry of Health
+    h1.headerText.virus COVID-19 (CORONA VIRUS)
+    h4.headerText Virus - Test Registration Form
+  div
+    span#successMsg.message
   section
-    //  REGISTRATION FORM 
+    //- REGISTRATION FORM 
     .container
       .row
         .col-md-12.order-md-1
-          form(name="regForm", action="./regestrationForm", method="POST", onsubmit="return regFormVal()")
+          form(name="regForm", action="/regestrationForm", method="POST", onsubmit="return regFormVal()")
             .row
               .col-md-6.mb-3
                 label(for="surName") Surname
@@ -59,14 +51,15 @@ main
                 span#nationalityErr.covers
                   
                   
-            h4.mb-3 Gender
+            h6.mb-3 Gender
             hr
             .row
               .col-md-6.mb-3
                 .custom-control.custom-radio
                   input#male.custom-control-input(name="gender", type="radio", value = "male" checked, required)
                   label.custom-control-label(for="male  ") Male
-                .custom-control.custom-radio.col-md-6.mb-3
+              .col-md-6.mb-3
+                .custom-control.custom-radio
                   input#female.custom-control-input(name="gender", type="radio", value = "female" required)
                   label.custom-control-label(for="female") Female
             .row
@@ -82,6 +75,3 @@ main
             .row
               .col-3.btnAlign
                 button.btn.btn-primary.btn-lg.btn-block(type="submit") Register
-script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
-script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js")
-script(src="../js/validation.js")

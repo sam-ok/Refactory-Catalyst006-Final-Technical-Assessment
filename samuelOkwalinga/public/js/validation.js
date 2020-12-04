@@ -51,21 +51,21 @@ let regFormVal = () => {
     // Place of residence.
     if (!residence.value.match(placeregex)) {
         residence.style.border = '1px solid red';
-        residenceErr.innerHTML = "It should be between 1 to 20 alpha-bet characters.";
+        residenceErr.innerHTML = "It should be between 1 to 20 alphabet characters.";
         return false;
     };
 
     // occupation validation.
     if (!occupation.value.match(occupationregex)) {
         occupation.style.border = '1px solid red';
-        occupationErr.innerHTML = "It should be between 5 to 50 alpha-bet characters";
+        occupationErr.innerHTML = "It should be between 5 to 50 alphabet characters";
         return false;
     }
 
     // nationality number validation.
     if (!nationality.value.match(placeregex)) {
         nationality.style.border = '1px solid red';
-        nationalityErr.innerHTML = "It should be between 5 to 20 alpha-bet characters.";
+        nationalityErr.innerHTML = "It should be between 5 to 20 alphabet characters.";
         return false;
     };
 
@@ -84,7 +84,6 @@ let regFormVal = () => {
     }
     else {
     successMsg.innerHTML = "Registration was successful!";
-    sleep(5000);
     return true;
 };
 };

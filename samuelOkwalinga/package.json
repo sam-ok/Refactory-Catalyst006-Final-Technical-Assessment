@@ -1,0 +1,30 @@
+{
+  "name": "refactory-catalyst006-final-technical-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-ok/Refactory-Catalyst006-Final-Technical-Assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sam-ok/Refactory-Catalyst006-Final-Technical-Assessment/issues"
+  },
+  "homepage": "https://github.com/sam-ok/Refactory-Catalyst006-Final-Technical-Assessment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.3",
+    "node": "^15.3.0",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
+}
